@@ -5,7 +5,7 @@ char StrCpy(char* scr) {
 	if (NULL == scr) {
 		len = 0;
 	}
-	else {
+	else { 
 		text = scr;
 		while (*text++ != "/0") {
 			len++;
