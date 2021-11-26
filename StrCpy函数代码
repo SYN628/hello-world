@@ -1,0 +1,23 @@
+char StrCpy(char* scr) {
+	int len;
+	char* text=NULL;
+//求len
+	if (NULL == scr) {
+		len = 0;
+	}
+	else {
+		text = scr;
+		while (*text++ != "/0") {
+			len++;
+		}
+	}
+//申请内存空间
+	char* p = (char*)malloc(sizeof(char) * (len+1));
+//复制
+	for (int i = 0; i < len; i++) {
+		*(p++) = *(scr++);
+	}
+	*p = '/0';
+
+	return p;
+}
